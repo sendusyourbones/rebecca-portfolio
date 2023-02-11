@@ -37,8 +37,24 @@ nav a:hover {
     color: var(--white);
 }
 
+#hero {
+    background-image: url("../images/background.jpg");
+    height: 300px;
+}
+
+#hero p {
+    background-color: #facf6b;
+    font: bold 2rem 'Courier New', Courier, monospace;
+    display: inline;
+    padding: 40px;
+    position: fixed;
+    top: 320px;
+    right: 0px;
+}
+
 footer {
     background-color: var(--light-purple);
+    background-size: cover;
 }
 
 @media screen and (max-width: 992px) {
@@ -54,10 +70,23 @@ footer {
     nav ul {
         justify-content: space-evenly;
     }
+    #hero p {
+        top: 350px;
+    }
 }
 
 @media screen and (max-width: 768px) {
     nav ul {
         font-size: 1.2rem;
+    }
+    #hero p {
+        top: 150px;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #hero p {
+        font-size: 1.5rem;
     }
 }
