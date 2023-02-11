@@ -40,16 +40,17 @@ nav a:hover {
 #hero {
     background-image: url("../images/background.jpg");
     height: 300px;
+    position: relative;
 }
 
 #hero p {
-    background-color: #facf6b;
+    background-color: var(--gold);
     font: bold 2rem 'Courier New', Courier, monospace;
     display: inline;
     padding: 40px;
-    position: fixed;
-    top: 320px;
-    right: 0px;
+    position: absolute;
+    top: 250px;
+    right: 0;
 }
 
 footer {
@@ -71,7 +72,7 @@ footer {
         justify-content: space-evenly;
     }
     #hero p {
-        top: 350px;
+        top: 250px;
     }
 }
 
@@ -80,7 +81,7 @@ footer {
         font-size: 1.2rem;
     }
     #hero p {
-        top: 150px;
+        top: 50px;
         padding: 20px;
     }
 }
