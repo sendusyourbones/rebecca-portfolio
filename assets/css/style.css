@@ -11,7 +11,7 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    margin: 2rem 0 2rem -1rem;
+    margin: 2rem 0;
 }
 
 h3 {
@@ -47,12 +47,13 @@ nav ul {
     font-size: 1.4rem;
 }
 
-nav a {
+nav a, footer a {
     text-decoration: none;
+    color: var(--light-pink);
 }
 
-nav a:hover {
-    color: var(--white);
+nav a:hover, footer a:hover {
+    color: var(--dark-purple);
 }
 
 #hero {
@@ -122,6 +123,35 @@ main {
 
 footer {
     background-color: var(--light-purple);
+    padding: 2%;
+    color: var(--light-pink);
+}
+
+footer h2 {
+    margin-top: 0;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer li {
+    font-size: 1.5rem;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+#phone:before {
+    content: '📞';
+    margin-right: 5px;
+}
+
+#email:before {
+    content: '📧';
+    margin-right: 5px;
 }
 
 @media screen and (max-width: 992px) {
