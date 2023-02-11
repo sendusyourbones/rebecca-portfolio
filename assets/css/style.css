@@ -76,11 +76,16 @@ main {
     margin: 5%;
 }
 
-#about img {
+#about-content {
+    display: flex;
+}
+
+#about-content img {
     border: 10px double #c7988b;
     border-radius: 50%;
     float: left;
     margin-right: 3%;
+    max-height: 200px;
 }
 
 #work section {
@@ -117,7 +122,6 @@ main {
 
 footer {
     background-color: var(--light-purple);
-    background-size: cover;
 }
 
 @media screen and (max-width: 992px) {
@@ -164,6 +168,14 @@ footer {
 @media screen and (max-width: 576px) {
     #hero p {
         font-size: 1.5rem;
+    }
+    #about-content {
+        flex-direction: column;
+    }
+    #about-content img {
+        max-width: 200px;
+        margin-bottom: 1rem;
+        align-self: center;
     }
     #other-work section {
         flex-direction: column;
