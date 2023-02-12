@@ -1,12 +1,13 @@
+/* General Styles */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #d1ebea;
+    background-color: var(--mint);
 }
 
 h1 {
     font-size: 2.3rem;
     color: var(--light-pink);
-    margin: auto 0;
 }
 
 h2 {
@@ -15,36 +16,43 @@ h2 {
 }
 
 h3 {
-    font: bold 1.5rem 'Courier New', Courier, monospace;
+    font: bold 1.5rem 'Courier New', Courier, monospace, serif;
     text-align: center;
-    margin: 1.5rem;
+    margin-top: 1.5rem;
 }
 
 p {
     font-size: 1.2rem;
     line-height: 1.5;
-    margin: 0 1rem 1rem 1rem;
+    margin: 1rem;
 }
+
+ul {
+    font-size: 1.4rem;
+}
+
+main {
+    margin: 5%;
+}
+
+/* Utilities */
+
+.flex {
+    display: flex;
+}
+
+/* Header (includes some footer styling) */
 
 #nav-bar {
     background-color: var(--light-purple);
     padding: 2%;
-}
-
-#nav-bar {
-    display: flex;
     justify-content: space-between;
-}
-
-nav {
-    margin: auto 0;
+    align-items: center;
 }
 
 nav ul {
-    display: flex;
     justify-content: space-between;
     min-width: 400px;
-    font-size: 1.4rem;
 }
 
 nav a, footer a {
@@ -64,33 +72,28 @@ nav a:hover, footer a:hover {
 
 #hero p {
     background-color: var(--gold);
-    font: bold 2rem 'Courier New', Courier, monospace;
+    font: bold 2rem 'Courier New', Courier, monospace, serif;
     display: inline;
     padding: 40px;
     position: absolute;
-    top: 250px;
+    top: 225px;
     right: 0;
     margin-right: 0;
 }
 
-main {
-    margin: 5%;
-}
-
-#about-content {
-    display: flex;
-}
+/* About Me */
 
 #about-content img {
-    border: 10px double #c7988b;
+    border: 10px double var(--brown);
     border-radius: 50%;
-    float: left;
     margin-right: 3%;
     max-height: 200px;
 }
 
+/* My Work */
+
 #work section {
-    border: 5px solid var(--light-purple);
+    border: 3px solid var(--light-purple);
     background-color: var(--light-pink);
     display: flex;
     flex-direction: column;
@@ -110,7 +113,6 @@ main {
 }
 
 #other-work {
-    display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 1%;
@@ -120,6 +122,8 @@ main {
     margin-top: 3%;
     max-width: 300px;
 }
+
+/* Contact Me */
 
 footer {
     background-color: var(--light-purple);
@@ -132,15 +136,9 @@ footer h2 {
 }
 
 footer ul {
-    display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    font-size: 1.5rem;
     padding-bottom: 2%;
-}
-
-footer a {
-    text-decoration: none;
 }
 
 #phone:before {
@@ -152,6 +150,8 @@ footer a {
     content: '📧';
     margin-right: 5px;
 }
+
+/* Media Queries */
 
 @media screen and (max-width: 992px) {
     #nav-bar {
@@ -165,9 +165,6 @@ footer a {
     }
     nav ul {
         justify-content: space-evenly;
-    }
-    #hero p {
-        top: 250px;
     }
 }
 
@@ -205,7 +202,6 @@ footer a {
         flex-direction: column;
     }
     #about-content img {
-        max-width: 200px;
         margin-bottom: 1rem;
         align-self: center;
     }
