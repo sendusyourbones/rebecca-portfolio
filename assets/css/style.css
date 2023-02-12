@@ -133,11 +133,10 @@ footer h2 {
 
 footer ul {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-}
-
-footer li {
     font-size: 1.5rem;
+    padding-bottom: 2%;
 }
 
 footer a {
@@ -176,7 +175,7 @@ footer a {
     p {
         font-size: 1rem;
     }
-    nav ul {
+    nav ul, footer ul {
         font-size: 1.2rem;
     }
     #hero p {
@@ -196,6 +195,9 @@ footer a {
 }
 
 @media screen and (max-width: 576px) {
+    nav ul {
+        min-width: 0;
+    }
     #hero p {
         font-size: 1.5rem;
     }
@@ -212,5 +214,10 @@ footer a {
     }
     #other-work a {
         margin-top: 1rem;
+    }
+    footer ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
     }
 }
