@@ -24,7 +24,7 @@ h3 {
 p {
     font-size: 1.2rem;
     line-height: 1.5;
-    margin: 1rem;
+    margin: 1rem 0;
 }
 
 ul {
@@ -73,12 +73,10 @@ nav a:hover, footer a:hover {
 #hero p {
     background-color: var(--gold);
     font: bold 2rem 'Courier New', Courier, monospace, serif;
-    display: inline;
     padding: 40px;
     position: absolute;
     top: 225px;
     right: 0;
-    margin-right: 0;
 }
 
 /* About Me */
@@ -98,6 +96,11 @@ nav a:hover, footer a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#work section p {
+    margin-right: 3%;
+    margin-left: 3%;
 }
 
 #work a:hover {
@@ -126,9 +129,9 @@ nav a:hover, footer a:hover {
 /* Contact Me */
 
 footer {
+    color: var(--light-pink);
     background-color: var(--light-purple);
     padding: 2%;
-    color: var(--light-pink);
 }
 
 footer h2 {
@@ -205,11 +208,14 @@ footer ul {
         margin-bottom: 1rem;
         align-self: center;
     }
-    #other-work section {
-        flex-direction: column;
+    #other-work a, #other-work img {
+        max-height: 120px;
     }
-    #other-work a {
-        margin-top: 1rem;
+    #other-work h3 {
+        font-size: 1.2rem;
+    }
+    #other-work p {
+        font-size: .9rem;
     }
     footer ul {
         flex-direction: column;
